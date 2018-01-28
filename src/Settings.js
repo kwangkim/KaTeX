@@ -28,6 +28,7 @@ export type SettingsOptions = {
  *                 and is placed in a block with vertical margin.
  */
 class Settings {
+    mathml: boolean;
     displayMode: boolean;
     throwOnError: boolean;
     errorColor: string;
@@ -38,6 +39,7 @@ class Settings {
     constructor(options: SettingsOptions) {
         // allow null options
         options = options || {};
+        this.mathml = utils.deflt(options.mathml, false);
         this.displayMode = utils.deflt(options.displayMode, false);
         this.throwOnError = utils.deflt(options.throwOnError, true);
         this.errorColor = utils.deflt(options.errorColor, "#cc0000");
