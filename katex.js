@@ -53,8 +53,16 @@ const renderToString = function(
     expression: string,
     options: SettingsOptions,
 ): string {
-    const markup = renderToDomTree(expression, options).toMarkup();
-    return markup;
+    //KWANG: turn on mathml    
+    if(options.mathml === true){    
+        const markup = renderToDomTree(expression, options).toMarkup();
+        return markup;
+    }//KWANG turn off mathml.
+    else{    
+        const markup = renderToHTMLTree(expression, options).toMarkup();
+        return markup;
+    }
+
 };
 
 /**
