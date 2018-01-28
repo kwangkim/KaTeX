@@ -9,6 +9,7 @@ import utils from "./utils";
 import type { MacroMap } from "./macros";
 
 export type SettingsOptions = {
+    mathml?: booleanl
     displayMode?: boolean;
     throwOnError?: boolean;
     errorColor?: string;
