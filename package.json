@@ -5,7 +5,7 @@
   "main": "dist/katex.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/Khan/KaTeX.git"
+    "url": "git://github.com/kwangkim/KaTeX.git"
   },
   "files": [
     "katex.js",
